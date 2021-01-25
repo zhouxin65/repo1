@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.zhouxin.dao.EmployeeDao">
+
+    <select id="findAll" resultType="employee">
+        select * from tb_employee;
+    </select>
+
+   <insert id="save" parameterType="com.zhouxin.domain.Employee">
+       INSERT INTO tb_employee VALUES(null,#{emp_name},#{dept_id},#{job_name},#{join_date},#{telephone});
+   </insert>
+
+
+
+</mapper>
